@@ -1,19 +1,18 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
 
 const SportCard = ({sport}) => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Title>{sport.title}</Card.Title>
-        <Card.Text>{sport.description}</Card.Text>
-        <Card.Text>{sport.dueDate}</Card.Text>
-        <Card.Text>{sport.status}</Card.Text>
-        <Button variant="primary">update</Button>
-      </Card.Body>
-    </Card>
-
+    <Card style={{display:'inline-block', width: '21rem'}}>
+    <Card.Header><b>World of sports</b></Card.Header>
+    <ListGroup variant="flush">
+      <ListGroup.Item>{sport.title}</ListGroup.Item>
+      <ListGroup.Item>{sport.description}</ListGroup.Item>
+      <ListGroup.Item>{sport.dueDate}</ListGroup.Item>
+      <ListGroup.Item>{sport.status}</ListGroup.Item>
+    </ListGroup>
+  </Card>
   )
 }
 
